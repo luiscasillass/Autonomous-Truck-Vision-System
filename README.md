@@ -1,5 +1,5 @@
 *Autonomous-Truck-Vision-System*
-
+------------------------------------
 An autonomous truck prototype powered by Raspberry Pi 3B+ and Arduino. It combines computer vision (via OpenCV), ultrasonic sensors, and an H-bridge motor controller for real-time STOP sign detection, distance measurement, and motor control. Data is stored in a MariaDB database and displayed via an iOS app.
 
 Table of Contents:
@@ -101,26 +101,26 @@ Ensure the Arduino and Raspberry Pi communicate via serial connection.
 On the Raspberry Pi:
 Install required libraries:
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
--sudo apt update
--sudo apt install python3-pip mariadb-server
--pip3 install flask opencv-python mysql-connector-python
+- sudo apt update
+- sudo apt install python3-pip mariadb-server
+- pip3 install flask opencv-python mysql-connector-python
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 *Clone the repository*
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
--git clone https://github.com/<your-username>/Autonomous-Truck-Vision-System.git
--cd Autonomous-Truck-Vision-System
+- git clone https://github.com/<your-username>/Autonomous-Truck-Vision-System.git
+- cd Autonomous-Truck-Vision-System
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 *Set up the MariaDB database*
 Start the database server:
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
--sudo service mysql start
--Create a database and table:
--sql
--CREATE DATABASE truck_data;
--USE truck_data;
--CREATE TABLE sensor_data (id INT AUTO_INCREMENT PRIMARY KEY, distance FLOAT, stop_detected BOOLEAN);
+- sudo service mysql start
+- Create a database and table:
+- sql
+- CREATE DATABASE truck_data;
+- USE truck_data;
+- CREATE TABLE sensor_data (id INT AUTO_INCREMENT PRIMARY KEY, distance FLOAT, stop_detected BOOLEAN);
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 On the Arduino:
@@ -136,7 +136,7 @@ On the iPhone:
   
 *Start the main program on the Raspberry Pi*
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
--python3 app/main.py
+- python3 app/main.py
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 The system will:
