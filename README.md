@@ -51,11 +51,12 @@ Components:
 
 *Hardware*
 - Raspberry Pi 3B+
-- Arduino (e.g., Uno or Nano)
+- Arduino (MEGA 2560 R3)
 - Webcam
-- Ultrasonic Sensor (e.g., HC-SR04)
-- H-Bridge Motor Controller (e.g., L298N)
-- Software:
+- Ultrasonic Sensor (HC-SR04)
+- H-Bridge Motor Controller (L298N)
+  
+*Software*
 - Languages: Python, Arduino C++, Swift
 - Frameworks/Tools: Flask, OpenCV
 - Database: MariaDB
@@ -76,14 +77,14 @@ Components:
 - detectores.py: Uses OpenCV to process webcam frames and detect STOP signs.
 - sensores.py: Receives ultrasonic sensor data from the Arduino.
 - database.py: Interfaces with the MariaDB database to store sensor data and events.
-- 
+  
 *Arduino Sketch*
 Manages:
 - Distance measurement with the ultrasonic sensor.
 - Motor voltage direction via the H-bridge.
 - Communication with the Raspberry Pi.
   
-iOS App:
+*iOS App*
 - Developed in Swift.
 Displays:
 - Distance detected by the ultrasonic sensor.
@@ -95,7 +96,7 @@ Displays:
 - Connect the ultrasonic sensor to the Arduino.
 - Attach the webcam to a USB port on the Raspberry Pi.
 - Wire the motors to the H-bridge and connect the H-bridge to the Arduino.
-Ensure the Arduino and Raspberry Pi communicate via serial connection (e.g., USB).
+Ensure the Arduino and Raspberry Pi communicate via serial connection.
 2. Software Setup:
 On the Raspberry Pi:
 Install required libraries:
@@ -105,7 +106,7 @@ sudo apt install python3-pip mariadb-server
 pip3 install flask opencv-python mysql-connector-python
 -----------------------------------------------------------------------------------------------------
 
-Clone the repository:
+*Clone the repository*
 ------------------------------------------------------------------------------------------------------
 git clone https://github.com/<your-username>/Autonomous-Truck-Vision-System.git
 cd Autonomous-Truck-Vision-System
@@ -133,7 +134,7 @@ On the iPhone:
 - Usage
 - Power on the Raspberry Pi and Arduino.
   
-Start the main program on the Raspberry Pi:
+*Start the main program on the Raspberry Pi*
 -----------------------------------------------------------------------------------------------
 python3 app/main.py
 -----------------------------------------------------------------------------------------------
