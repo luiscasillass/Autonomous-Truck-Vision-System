@@ -100,28 +100,28 @@ Ensure the Arduino and Raspberry Pi communicate via serial connection.
 2. Software Setup:
 On the Raspberry Pi:
 Install required libraries:
-----------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 sudo apt update
 sudo apt install python3-pip mariadb-server
 pip3 install flask opencv-python mysql-connector-python
------------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 *Clone the repository*
-------------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 git clone https://github.com/<your-username>/Autonomous-Truck-Vision-System.git
 cd Autonomous-Truck-Vision-System
-------------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 *Set up the MariaDB database*
 Start the database server:
--------------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 sudo service mysql start
 Create a database and table:
 sql
 CREATE DATABASE truck_data;
 USE truck_data;
 CREATE TABLE sensor_data (id INT AUTO_INCREMENT PRIMARY KEY, distance FLOAT, stop_detected BOOLEAN);
---------------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 On the Arduino:
 - Upload the Arduino sketch to control the ultrasonic sensor and H-bridge.
@@ -135,9 +135,9 @@ On the iPhone:
 - Power on the Raspberry Pi and Arduino.
   
 *Start the main program on the Raspberry Pi*
------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 python3 app/main.py
------------------------------------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 The system will:
 - Detect STOP signs in real-time using OpenCV.
@@ -153,25 +153,27 @@ The system will:
   
 *Contributors*
 
-Project Lead: Luis Andres Casillas
+*Project Lead*
+- Luis Andres Casillas
 
-Development Team: 
+*Development Team* 
 - Luis Andres Casillas
 - Braulio Fernando Antero Díaz
 - Paulina Mendez Lopez
 - Bernardo Santiago Marin
 
-iOS Development: Bernardo Santiago Marin
+*iOS Development*
+- Bernardo Santiago Marin
 
-Database and Backend: 
+*Database and Backend*
 - Luis Andres Casillas
 - Paulina Mendez Lopez
   
-Arduino Integration:
+*Arduino Integration*
 - Luis Andres Casillas
 - Braulio Fernando Antero Díaz
   
-H-Bridge Integration:
+*H-Bridge Integration*
 - Luis Andres Casillas
 - Braulio Fernando Antero Díaz
 
