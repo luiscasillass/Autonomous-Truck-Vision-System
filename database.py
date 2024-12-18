@@ -4,7 +4,7 @@ from flask import Flask, jsonify
 import mysql.connector
 import threading
 
-host_ip = '10.43.49.57'
+host_ip = '10.43.49.57' # IP direccion of your device 
 app = Flask(__name__)
 lock = threading.Lock()
 dist = -1
